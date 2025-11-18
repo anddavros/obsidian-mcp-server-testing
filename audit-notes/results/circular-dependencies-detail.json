@@ -1,0 +1,28 @@
+[
+  [
+    "utils/index.ts",
+    "utils/internal/index.ts",
+    "utils/internal/asyncUtils.ts",
+    "utils/internal/logger.ts",
+    "utils/internal/requestContext.ts"
+  ],
+  [
+    "utils/internal/logger.ts",
+    "utils/internal/requestContext.ts"
+  ],
+  [
+    "utils/index.ts",
+    "utils/internal/index.ts",
+    "utils/internal/errorHandler.ts"
+  ],
+  [
+    "utils/index.ts",
+    "utils/metrics/index.ts",
+    "utils/metrics/tokenCounter.ts"
+  ],
+  [
+    "services/obsidianRestAPI/index.ts",
+    "services/obsidianRestAPI/vaultCache/index.ts",
+    "services/obsidianRestAPI/vaultCache/service.ts"
+  ]
+]

@@ -1,0 +1,11 @@
+- Finding files
+Processed 67 files (1.9s) 
+
+✖ Found 5 circular dependencies!
+
+1) utils/index.ts > utils/internal/index.ts > utils/internal/asyncUtils.ts > utils/internal/logger.ts > utils/internal/requestContext.ts
+2) utils/internal/logger.ts > utils/internal/requestContext.ts
+3) utils/index.ts > utils/internal/index.ts > utils/internal/errorHandler.ts
+4) utils/index.ts > utils/metrics/index.ts > utils/metrics/tokenCounter.ts
+5) services/obsidianRestAPI/index.ts > services/obsidianRestAPI/vaultCache/index.ts > services/obsidianRestAPI/vaultCache/service.ts
+
