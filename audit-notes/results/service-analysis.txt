@@ -1,0 +1,89 @@
+=== Service Layer Analysis ===
+
+## 1. Service File Structure
+
+Main service file:
+620 src/services/obsidianRestAPI/service.ts
+
+Method files:
+  101 src/services/obsidianRestAPI/methods/activeFileMethods.ts
+   55 src/services/obsidianRestAPI/methods/commandMethods.ts
+   34 src/services/obsidianRestAPI/methods/openMethods.ts
+  134 src/services/obsidianRestAPI/methods/patchMethods.ts
+  109 src/services/obsidianRestAPI/methods/periodicNoteMethods.ts
+   65 src/services/obsidianRestAPI/methods/searchMethods.ts
+  212 src/services/obsidianRestAPI/methods/vaultMethods.ts
+  710 total
+
+Vault cache service:
+407 src/services/obsidianRestAPI/vaultCache/service.ts
+
+## 2. Service Methods Count
+
+Public methods in ObsidianRestApiService:
+23
+
+Methods by category:
+activeFileMethods.ts: 4 functions
+commandMethods.ts: 2 functions
+openMethods.ts: 1 functions
+patchMethods.ts: 3 functions
+periodicNoteMethods.ts: 4 functions
+searchMethods.ts: 2 functions
+vaultMethods.ts: 6 functions
+
+## 3. Error Handling Patterns
+
+McpError throws in service:
+5
+
+ErrorHandler.tryCatch usage:
+1
+
+## 4. HTTP Client Configuration
+
+Axios instance configuration:
+    this.axiosInstance = axios.create({
+      baseURL: config.obsidianBaseUrl.replace(/\/$/, ""), // Remove trailing slash
+      headers: {
+        Authorization: `Bearer ${this.apiKey}`,
+        Accept: "application/json", // Default accept type
+      },
+      timeout: 60000, // Increased timeout to 60 seconds (was 15000)
+      httpsAgent,
+    });
+
+    logger.info(
+
+## 5. Cache Service Analysis
+
+Cache public methods:
+9
+
+Cache interface:
+public startPeriodicRefresh(): void {
+public stopPeriodicRefresh(): void {
+public isReady(): boolean {
+public getIsBuilding(): boolean {
+public getCache(): ReadonlyMap<string, CacheEntry> {
+public getEntry(filePath: string): CacheEntry | undefined {
+public async updateCacheForFile(
+public async buildVaultCache(): Promise<void> {
+public async refreshCache(isInitialBuild = false): Promise<void> {
+
+## 6. Service Dependencies
+
+Imports in service.ts:
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from "axios";
+import https from "node:https"; // Import the https module for Agent configuration
+import { config } from "../../config/index.js";
+import { BaseErrorCode, McpError } from "../../types-global/errors.js";
+import {
+import * as activeFileMethods from "./methods/activeFileMethods.js";
+import * as commandMethods from "./methods/commandMethods.js";
+import * as openMethods from "./methods/openMethods.js";
+import * as patchMethods from "./methods/patchMethods.js";
+import * as periodicNoteMethods from "./methods/periodicNoteMethods.js";
+import * as searchMethods from "./methods/searchMethods.js";
+import * as vaultMethods from "./methods/vaultMethods.js";
+import {
