@@ -1,0 +1,65 @@
+#!/bin/bash
+# Security audit analysis
+
+echo "=== Security Analysis ==="
+echo ""
+
+echo "## 1. Input Validation Coverage"
+echo ""
+echo "Zod schema usage:"
+grep -r "z\\.object" src/ --include="*.ts" | wc -l | xargs echo "Total z.object schemas:"
+grep -r "z\\.string()" src/ --include="*.ts" | wc -l | xargs echo "String validations:"
+grep -r "\\.min(" src/ --include="*.ts" | wc -l | xargs echo "Min length checks:"
+grep -r "\\.max(" src/ --include="*.ts" | wc -l | xargs echo "Max length checks:"
+grep -r "z\\.enum" src/ --include="*.ts" | wc -l | xargs echo "Enum validations:"
+
+echo ""
+echo "## 2. Sanitization Functions"
+echo ""
+echo "Sanitization usage:"
+grep -r "sanitize" src/ --include="*.ts" -i | wc -l | xargs echo "Total sanitization references:"
+echo ""
+echo "Files using sanitization:"
+grep -r "sanitize" src/ --include="*.ts" -i | cut -d: -f1 | sort -u | wc -l | xargs echo "Files count:"
+
+echo ""
+echo "## 3. Authentication & Authorization"
+echo ""
+echo "API key handling:"
+grep -r "apiKey\|API_KEY" src/ --include="*.ts" | wc -l | xargs echo "API key references:"
+grep -r "Authorization" src/ --include="*.ts" | wc -l | xargs echo "Authorization header uses:"
+grep -r "Bearer" src/ --include="*.ts" | wc -l | xargs echo "Bearer token uses:"
+
+echo ""
+echo "## 4. Path Security"
+echo ""
+echo "Path handling:"
+grep -r "path\\.posix" src/ --include="*.ts" | wc -l | xargs echo "POSIX path uses:"
+grep -r "encodeVaultPath\|encodePath" src/ --include="*.ts" | wc -l | xargs echo "Path encoding uses:"
+grep -r "\\.\\.\/" src/ --include="*.ts" | wc -l | xargs echo "Relative path references:"
+
+echo ""
+echo "## 5. Sensitive Data in Logs"
+echo ""
+echo "Logger redaction:"
+grep -r "redact\|sanitize.*log\|mask" src/utils/internal/logger.ts 2>/dev/null | wc -l | xargs echo "Redaction patterns:"
+
+echo ""
+echo "## 6. SSL/TLS Configuration"
+echo ""
+echo "SSL verification:"
+grep -r "VERIFY_SSL\|rejectUnauthorized" src/ --include="*.ts" | wc -l | xargs echo "SSL config references:"
+
+echo ""
+echo "## 7. Rate Limiting"
+echo ""
+echo "Rate limiter usage:"
+grep -r "rateLimiter\|RateLimit" src/ --include="*.ts" -i | wc -l | xargs echo "Rate limit references:"
+
+echo ""
+echo "## 8. Error Information Disclosure"
+echo ""
+echo "Error handling:"
+grep -r "error\\.stack" src/ --include="*.ts" | wc -l | xargs echo "Stack trace exposures:"
+grep -r "error\\.message" src/ --include="*.ts" | wc -l | xargs echo "Error message uses:"
+
