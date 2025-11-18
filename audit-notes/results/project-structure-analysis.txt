@@ -1,0 +1,75 @@
+=== Project Structure Analysis ===
+
+## Directory Statistics
+
+Total directories: 29
+Total TypeScript files: 67
+Total JavaScript files: 0
+
+## Top-level Structure
+
+total 43
+drwxr-xr-x 7 root root  4096 Nov 18 16:00 .
+drwxr-xr-x 9 root root  4096 Nov 18 16:08 ..
+drwxr-xr-x 2 root root  4096 Nov 18 16:00 config
+-rw-r--r-- 1 root root 14449 Nov 18 16:00 index.ts
+drwxr-xr-x 4 root root  4096 Nov 18 16:00 mcp-server
+drwxr-xr-x 3 root root  4096 Nov 18 16:00 services
+drwxr-xr-x 2 root root  4096 Nov 18 16:00 types-global
+drwxr-xr-x 7 root root  4096 Nov 18 16:00 utils
+
+## Line Count by Directory
+
+config/
+231 src/config/index.ts
+
+mcp-server/
+  6284 total
+
+services/
+ 1905 total
+
+utils/
+  3555 total
+
+types-global/
+84 src/types-global/errors.ts
+
+## File Size Distribution
+
+Files > 500 lines:
+src/mcp-server/tools/obsidianGlobalSearchTool/logic.ts (529 lines)
+src/mcp-server/tools/obsidianSearchReplaceTool/logic.ts (914 lines)
+src/mcp-server/tools/obsidianUpdateNoteTool/logic.ts (781 lines)
+src/services/obsidianRestAPI/service.ts (620 lines)
+src/utils/internal/errorHandler.ts (539 lines)
+src/utils/internal/logger.ts (577 lines)
+src/utils/security/sanitization.ts (812 lines)
+total (12453 lines)
+
+## Tool Structure
+
+Total tools:
+8
+
+Tool directories:
+obsidianDeleteNoteTool
+obsidianGlobalSearchTool
+obsidianListNotesTool
+obsidianManageFrontmatterTool
+obsidianManageTagsTool
+obsidianReadNoteTool
+obsidianSearchReplaceTool
+obsidianUpdateNoteTool
+
+## Import Analysis
+
+External dependencies imported:
+..
+@hono
+@modelcontextprotocol
+dotenv
+fs
+path
+url
+zod

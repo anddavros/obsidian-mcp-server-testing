@@ -1,0 +1,62 @@
+=== Module Boundary Analysis ===
+
+## 1. Config Module Imports
+Files that import from config/:
+Count: 9
+
+## 2. MCP Server Module Dependencies
+mcp-server/ imports from:
+     45 
+
+## 3. Services Module Dependencies
+services/ imports from:
+     19 
+
+## 4. Cross-Module Import Count
+
+config → other modules:
+0
+mcp-server → other modules:
+74
+services → other modules:
+24
+utils → other modules:
+0
+types-global → other modules:
+0
+
+## 5. Tool Consistency Check
+Checking if all tools follow index/logic/registration pattern:
+obsidianDeleteNoteTool: index[✓] logic[✓] registration[✓]
+obsidianGlobalSearchTool: index[✓] logic[✓] registration[✓]
+obsidianListNotesTool: index[✓] logic[✓] registration[✓]
+obsidianManageFrontmatterTool: index[✓] logic[✓] registration[✓]
+obsidianManageTagsTool: index[✓] logic[✓] registration[✓]
+obsidianReadNoteTool: index[✓] logic[✓] registration[✓]
+obsidianSearchReplaceTool: index[✓] logic[✓] registration[✓]
+obsidianUpdateNoteTool: index[✓] logic[✓] registration[✓]
+
+## 6. Barrel File Usage
+Number of index.ts files:
+19
+
+Barrel files and their locations:
+mcp-server/transports/auth/index.ts
+mcp-server/tools/obsidianSearchReplaceTool/index.ts
+mcp-server/tools/obsidianGlobalSearchTool/index.ts
+mcp-server/tools/obsidianDeleteNoteTool/index.ts
+mcp-server/tools/obsidianUpdateNoteTool/index.ts
+mcp-server/tools/obsidianManageFrontmatterTool/index.ts
+mcp-server/tools/obsidianReadNoteTool/index.ts
+mcp-server/tools/obsidianListNotesTool/index.ts
+mcp-server/tools/obsidianManageTagsTool/index.ts
+index.ts
+config/index.ts
+services/obsidianRestAPI/index.ts
+services/obsidianRestAPI/vaultCache/index.ts
+utils/metrics/index.ts
+utils/parsing/index.ts
+utils/security/index.ts
+utils/index.ts
+utils/obsidian/index.ts
+utils/internal/index.ts
