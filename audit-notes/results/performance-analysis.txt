@@ -1,0 +1,78 @@
+=== Performance Analysis ===
+
+1. Cache Implementation Analysis
+   VaultCacheService usage:
+89
+   Cache refresh patterns:
+16
+   Incremental refresh logic:
+27
+
+2. Async Patterns
+   async/await usage:
+139
+   Promise.all usage (parallel):
+0
+   Sequential await patterns:
+0
+
+3. Retry Logic & Backoff
+   retryWithDelay usage:
+36
+   Retry configurations:
+31
+
+4. API Call Optimization
+   Axios request configurations:
+7
+   HTTP connection pooling:
+3
+
+5. Memory Management
+   Map/Set usage (potential memory leaks):
+12
+   Cleanup/dispose patterns:
+104
+   Timer/interval cleanup:
+3
+
+6. Resource Pooling
+   Connection reuse:
+0
+   Instance reuse (singletons):
+6
+
+7. Large Data Handling
+   Stream usage:
+0
+   Buffer operations:
+3
+   String size limits:
+7
+
+8. Search Optimization
+   Search timeout configuration:
+6
+   Search result limiting:
+77
+
+=== Performance Metrics by File ===
+
+Largest service files (potential optimization targets):
+ 1905 total
+  620 src/services/obsidianRestAPI/service.ts
+  407 src/services/obsidianRestAPI/vaultCache/service.ts
+  212 src/services/obsidianRestAPI/methods/vaultMethods.ts
+  146 src/services/obsidianRestAPI/types.ts
+  134 src/services/obsidianRestAPI/methods/patchMethods.ts
+  109 src/services/obsidianRestAPI/methods/periodicNoteMethods.ts
+  101 src/services/obsidianRestAPI/methods/activeFileMethods.ts
+   65 src/services/obsidianRestAPI/methods/searchMethods.ts
+   55 src/services/obsidianRestAPI/methods/commandMethods.ts
+
+Most complex tool files:
+  3728 total
+   914 src/mcp-server/tools/obsidianSearchReplaceTool/logic.ts
+   781 src/mcp-server/tools/obsidianUpdateNoteTool/logic.ts
+   529 src/mcp-server/tools/obsidianGlobalSearchTool/logic.ts
+   390 src/mcp-server/tools/obsidianReadNoteTool/logic.ts
