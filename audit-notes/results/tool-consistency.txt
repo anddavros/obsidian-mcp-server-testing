@@ -1,0 +1,70 @@
+=== Tool Consistency Comparison ===
+
+## 1. Schema Export Pattern
+
+Checking for consistent schema exports:
+obsidianDeleteNoteTool: schema=1, type=1
+obsidianGlobalSearchTool: schema=1, type=1
+obsidianListNotesTool: schema=1, type=1
+obsidianManageFrontmatterTool: schema=2, type=1
+obsidianManageTagsTool: schema=2, type=1
+obsidianReadNoteTool: schema=1, type=1
+obsidianSearchReplaceTool: schema=2, type=2
+obsidianUpdateNoteTool: schema=2, type=2
+
+## 2. Response Interface Pattern
+
+Checking for response interfaces:
+obsidianDeleteNoteTool: 1 response interface(s)
+obsidianGlobalSearchTool: 1 response interface(s)
+obsidianListNotesTool: 1 response interface(s)
+obsidianManageFrontmatterTool: 1 response interface(s)
+obsidianManageTagsTool: 1 response interface(s)
+obsidianReadNoteTool: 1 response interface(s)
+obsidianSearchReplaceTool: 1 response interface(s)
+obsidianUpdateNoteTool: 1 response interface(s)
+
+## 3. Process Function Pattern
+
+Checking for main process function:
+obsidianDeleteNoteTool: 1 process function(s)
+obsidianGlobalSearchTool: 1 process function(s)
+obsidianListNotesTool: 1 process function(s)
+obsidianManageFrontmatterTool: 1 process function(s)
+obsidianManageTagsTool: 1 process function(s)
+obsidianReadNoteTool: 1 process function(s)
+obsidianSearchReplaceTool: 1 process function(s)
+obsidianUpdateNoteTool: 1 process function(s)
+
+## 4. Retry Logic Usage
+
+retryWithDelay usage per tool:
+obsidianDeleteNoteTool: 4 retry calls
+obsidianGlobalSearchTool: 2 retry calls
+obsidianListNotesTool: 2 retry calls
+obsidianManageFrontmatterTool: 4 retry calls
+obsidianManageTagsTool: 4 retry calls
+obsidianReadNoteTool: 4 retry calls
+obsidianSearchReplaceTool: 3 retry calls
+obsidianUpdateNoteTool: 6 retry calls
+
+## 5. Cache Integration
+
+VaultCacheService usage:
+obsidianDeleteNoteTool: 5 cache references
+obsidianGlobalSearchTool: 4 cache references
+obsidianListNotesTool: 0
+0 cache references
+obsidianManageFrontmatterTool: 5 cache references
+obsidianManageTagsTool: 5 cache references
+obsidianReadNoteTool: 0
+0 cache references
+obsidianSearchReplaceTool: 3 cache references
+obsidianUpdateNoteTool: 5 cache references
+
+## 6. Logger Usage
+
+Logger calls per tool:
+obsidianDeleteNoteTool: debug=5, info=2, error=6, total=13
+./audit-notes/scripts/compare-tools.sh: line 66: 0
+0: syntax error in expression (error token is "0")

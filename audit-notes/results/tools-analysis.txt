@@ -1,0 +1,91 @@
+=== Tool Implementation Analysis ===
+
+## 1. Tool List and Structure
+
+All tools:
+obsidianDeleteNoteTool
+obsidianGlobalSearchTool
+obsidianListNotesTool
+obsidianManageFrontmatterTool
+obsidianManageTagsTool
+obsidianReadNoteTool
+obsidianSearchReplaceTool
+obsidianUpdateNoteTool
+
+## 2. Tool File Sizes
+
+obsidianDeleteNoteTool: logic=283, registration=155, index=12, total=450
+obsidianGlobalSearchTool: logic=529, registration=132, index=13, total=674
+obsidianListNotesTool: logic=341, registration=158, index=12, total=511
+obsidianManageFrontmatterTool: logic=242, registration=119, index=9, total=370
+obsidianManageTagsTool: logic=248, registration=118, index=9, total=375
+obsidianReadNoteTool: logic=390, registration=159, index=12, total=561
+obsidianSearchReplaceTool: logic=914, registration=180, index=12, total=1106
+obsidianUpdateNoteTool: logic=781, registration=177, index=12, total=970
+
+## 3. Input Schema Analysis
+
+Tools with Zod schemas:
+./audit-notes/scripts/analyze-tools.sh: line 31: [: 0
+0: integer expression expected
+./audit-notes/scripts/analyze-tools.sh: line 31: [: 0
+0: integer expression expected
+./audit-notes/scripts/analyze-tools.sh: line 31: [: 0
+0: integer expression expected
+obsidianManageFrontmatterTool: 1 schema(s)
+obsidianManageTagsTool: 1 schema(s)
+./audit-notes/scripts/analyze-tools.sh: line 31: [: 0
+0: integer expression expected
+obsidianSearchReplaceTool: 2 schema(s)
+obsidianUpdateNoteTool: 1 schema(s)
+
+## 4. Error Handling Patterns
+
+McpError throws per tool:
+obsidianDeleteNoteTool: 4 throws
+obsidianGlobalSearchTool: 3 throws
+obsidianListNotesTool: 2 throws
+obsidianManageFrontmatterTool: 1 throws
+obsidianManageTagsTool: 1 throws
+obsidianReadNoteTool: 4 throws
+obsidianSearchReplaceTool: 6 throws
+obsidianUpdateNoteTool: 5 throws
+
+## 5. Service Method Usage
+
+ObsidianRestApiService method calls:
+obsidianDeleteNoteTool: 3 service calls
+obsidianGlobalSearchTool: 5 service calls
+obsidianListNotesTool: 1 service calls
+obsidianManageFrontmatterTool: 3 service calls
+obsidianManageTagsTool: 3 service calls
+obsidianReadNoteTool: 3 service calls
+obsidianSearchReplaceTool: 11 service calls
+obsidianUpdateNoteTool: 15 service calls
+
+## 6. Tool Registration Pattern
+
+Registration file exports:
+obsidianDeleteNoteTool: 1 exports
+obsidianGlobalSearchTool: 1 exports
+obsidianListNotesTool: 1 exports
+obsidianManageFrontmatterTool: 1 exports
+obsidianManageTagsTool: 1 exports
+obsidianReadNoteTool: 1 exports
+obsidianSearchReplaceTool: 1 exports
+obsidianUpdateNoteTool: 1 exports
+
+## 7. Documentation Quality
+
+JSDoc blocks in logic files:
+obsidianDeleteNoteTool: 4 JSDoc blocks
+obsidianGlobalSearchTool: 0
+0 JSDoc blocks
+obsidianListNotesTool: 8 JSDoc blocks
+obsidianManageFrontmatterTool: 0
+0 JSDoc blocks
+obsidianManageTagsTool: 0
+0 JSDoc blocks
+obsidianReadNoteTool: 6 JSDoc blocks
+obsidianSearchReplaceTool: 13 JSDoc blocks
+obsidianUpdateNoteTool: 15 JSDoc blocks
