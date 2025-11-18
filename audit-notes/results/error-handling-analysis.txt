@@ -1,0 +1,85 @@
+=== Error Handling & Resilience Analysis ===
+
+1. Error Handling Patterns
+   McpError usage:
+67
+   Total catch blocks:
+63
+   Error type checks:
+120
+   McpError type checks:
+54
+
+2. Logging Coverage
+   logger.error calls:
+55
+   logger.warning calls:
+55
+   logger.info calls:
+72
+   logger.debug calls:
+117
+   logger.crit/fatal calls:
+5
+
+3. Graceful Degradation
+   Fallback patterns (try-catch with fallback):
+21
+   Optional chaining usage:
+26
+   Nullish coalescing:
+23
+
+4. Timeout & Abort Handling
+   Timeout configurations:
+7
+   AbortController usage:
+0
+
+5. Shutdown & Cleanup
+   Graceful shutdown handlers:
+4
+   Cleanup/dispose patterns:
+48
+   Finally blocks:
+3
+
+6. Resilience Patterns
+   Retry logic:
+79
+   Circuit breaker references:
+0
+   Fallback cache usage:
+3
+
+7. Error Context & Debugging
+   RequestContext propagation:
+283
+   Error details/metadata:
+9
+   Stack trace usage:
+17
+
+8. Validation & Preconditions
+   Zod validation (safe parse):
+21
+   Null/undefined checks:
+68
+   Type guards:
+206
+
+=== Error Type Distribution ===
+
+By BaseErrorCode:
+     49 INTERNAL_ERROR
+     31 VALIDATION_ERROR
+     28 NOT_FOUND
+     13 UNAUTHORIZED
+      9 SERVICE_UNAVAILABLE
+      6 CONFLICT
+      5 RATE_LIMITED
+      5 FORBIDDEN
+      4 TIMEOUT
+      4 PARSING_ERROR
+      2 CONFIGURATION_ERROR
+      1 UNKNOWN_ERROR
