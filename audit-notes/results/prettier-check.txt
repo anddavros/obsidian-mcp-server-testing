@@ -1,0 +1,7 @@
+Checking formatting...
+[warn] audit-notes/findings/01-phase1-automated-analysis.md
+[warn] audit-notes/findings/02-circular-dependencies.md
+[warn] audit-notes/results/circular-dependencies-detail.json
+[warn] audit-notes/results/npm-audit.json
+[warn] docs/CODEBASE_AUDIT_PLAN.md
+[warn] Code style issues found in 5 files. Run Prettier with --write to fix.
