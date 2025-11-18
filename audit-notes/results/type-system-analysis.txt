@@ -1,0 +1,103 @@
+=== Type System Analysis ===
+
+## 1. TypeScript Configuration
+
+tsconfig.json:
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+
+## 2. Zod Schema Usage
+
+Files using Zod:
+Total files: 10
+
+Zod schema locations:
+src/config/index.ts
+src/mcp-server/tools/obsidianDeleteNoteTool/logic.ts
+src/mcp-server/tools/obsidianGlobalSearchTool/logic.ts
+src/mcp-server/tools/obsidianListNotesTool/logic.ts
+src/mcp-server/tools/obsidianManageFrontmatterTool/logic.ts
+src/mcp-server/tools/obsidianManageTagsTool/logic.ts
+src/mcp-server/tools/obsidianReadNoteTool/logic.ts
+src/mcp-server/tools/obsidianSearchReplaceTool/logic.ts
+src/mcp-server/tools/obsidianUpdateNoteTool/logic.ts
+src/types-global/errors.ts
+
+## 3. Interface Definitions
+
+Total interface definitions:
+42
+
+Interfaces by file:
+     12 src/services/obsidianRestAPI/types.ts
+      4 src/utils/security/sanitization.ts
+      4 src/utils/internal/errorHandler.ts
+      3 src/utils/obsidian/obsidianStatUtils.ts
+      3 src/utils/internal/requestContext.ts
+      3 src/mcp-server/tools/obsidianGlobalSearchTool/logic.ts
+      2 src/utils/security/rateLimiter.ts
+      2 src/utils/security/idGenerator.ts
+      1 src/utils/internal/logger.ts
+      1 src/utils/internal/asyncUtils.ts
+      1 src/mcp-server/tools/obsidianUpdateNoteTool/logic.ts
+      1 src/mcp-server/tools/obsidianSearchReplaceTool/logic.ts
+      1 src/mcp-server/tools/obsidianReadNoteTool/logic.ts
+      1 src/mcp-server/tools/obsidianManageTagsTool/logic.ts
+      1 src/mcp-server/tools/obsidianManageFrontmatterTool/logic.ts
+      1 src/mcp-server/tools/obsidianListNotesTool/logic.ts
+      1 src/mcp-server/tools/obsidianDeleteNoteTool/logic.ts
+
+## 4. Type Definitions
+
+Total type definitions:
+20
+
+Types by file:
+      3 src/utils/internal/logger.ts
+      2 src/services/obsidianRestAPI/types.ts
+      2 src/mcp-server/tools/obsidianUpdateNoteTool/logic.ts
+      2 src/mcp-server/tools/obsidianSearchReplaceTool/logic.ts
+      1 src/types-global/errors.ts
+      1 src/mcp-server/transports/auth/index.ts
+      1 src/mcp-server/transports/auth/core/authTypes.ts
+      1 src/mcp-server/tools/obsidianReadNoteTool/logic.ts
+      1 src/mcp-server/tools/obsidianManageTagsTool/logic.ts
+      1 src/mcp-server/tools/obsidianManageTagsTool/index.ts
+      1 src/mcp-server/tools/obsidianManageFrontmatterTool/logic.ts
+      1 src/mcp-server/tools/obsidianManageFrontmatterTool/index.ts
+      1 src/mcp-server/tools/obsidianListNotesTool/logic.ts
+      1 src/mcp-server/tools/obsidianGlobalSearchTool/logic.ts
+      1 src/mcp-server/tools/obsidianDeleteNoteTool/logic.ts
+
+## 5. Enum Definitions
+
+Total enum definitions:
+1
+
+## 6. Type Safety Indicators
+
+Usage of 'any' type:
+9
+
+Usage of 'unknown' type:
+55
+
+Usage of '!' (non-null assertion):
+4
+
+Usage of 'as' type assertions:
+163

@@ -1,0 +1,10 @@
+=== Finding 'any' type usages ===
+src/mcp-server/transports/httpTransport.ts:123:      } catch (err: any) {
+src/mcp-server/tools/obsidianGlobalSearchTool/registration.ts:61:          handlerInvocationContext: any,
+src/mcp-server/tools/obsidianManageFrontmatterTool/logic.ts:70:  value?: any;
+src/config/index.ts:38:} catch (error: any) {
+src/config/index.ts:166:    } catch (statError: any) {
+src/services/obsidianRestAPI/types.ts:86:  result: any; // The result returned by the query logic for this file
+src/utils/parsing/jsonParser.ts:118:    } catch (error: any) {
+src/utils/internal/logger.ts:69:  [key: string]: any;
+src/utils/internal/logger.ts:83:  [key: string]: any;
