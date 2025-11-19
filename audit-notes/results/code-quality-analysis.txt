@@ -1,0 +1,206 @@
+=========================================
+Code Quality Metrics Analysis
+=========================================
+
+=== Code Structure ===
+
+Function Declarations:
+128
+
+Arrow Functions:
+181
+
+Class Declarations:
+9
+
+Interface Declarations:
+46
+
+Type Aliases:
+23
+
+=== File Size Metrics ===
+
+Largest TypeScript Files (by line count):
+914 src/mcp-server/tools/obsidianSearchReplaceTool/logic.ts
+812 src/utils/security/sanitization.ts
+781 src/mcp-server/tools/obsidianUpdateNoteTool/logic.ts
+620 src/services/obsidianRestAPI/service.ts
+577 src/utils/internal/logger.ts
+539 src/utils/internal/errorHandler.ts
+529 src/mcp-server/tools/obsidianGlobalSearchTool/logic.ts
+407 src/services/obsidianRestAPI/vaultCache/service.ts
+394 src/index.ts
+390 src/mcp-server/tools/obsidianReadNoteTool/logic.ts
+341 src/mcp-server/tools/obsidianListNotesTool/logic.ts
+337 src/utils/security/rateLimiter.ts
+305 src/mcp-server/server.ts
+283 src/mcp-server/tools/obsidianDeleteNoteTool/logic.ts
+278 src/utils/security/idGenerator.ts
+277 src/mcp-server/transports/httpTransport.ts
+248 src/mcp-server/tools/obsidianManageTagsTool/logic.ts
+242 src/mcp-server/tools/obsidianManageFrontmatterTool/logic.ts
+231 src/config/index.ts
+212 src/services/obsidianRestAPI/methods/vaultMethods.ts
+
+=== Complexity Indicators ===
+
+Functions with 'if' statements:
+351
+
+Switch statements:
+6
+
+Try-catch blocks:
+67
+
+Nested loops (for...for, while...while):
+grep: src/: Is a directory
+0
+
+=== Code Duplication Analysis ===
+
+Checking for duplicated error messages...
+      4 throw new McpError(errorCode, errorMessage, operationContext)
+      1 throw new McpError(errorCode, errorMessage)
+      1 throw new McpError(error.code, notFoundMsg, context)
+      1 throw new McpError(BaseErrorCode.UNAUTHORIZED, "Token expired.")
+      1 throw new McpError(BaseErrorCode.CONFLICT, errorMsg, fallbackContext)
+      1 throw new Error(`Failed to fetch user: ${response.status}`)
+      1 throw new Error("Path contains null byte, which is disallowed.")
+      1 throw new Error("Obsidian service not initialized.")
+      1 throw new Error("OAUTH_AUDIENCE must be set when MCP_AUTH_MODE is 'oauth'")
+      1 throw new Error("JavaScript pseudo-protocol is explicitly disallowed.")
+
+Checking for duplicated string patterns...
+     17 "../../../types-global/errors.js"
+     16 "../../../services/obsidianRestAPI/index.js"
+     12 "@modelcontextprotocol/sdk/server/mcp.js"
+      3 "application/vnd.olrapi.note+json"
+      2 "application/vnd.olrapi.jsonlogic+json"
+      2 "application/vnd.olrapi.dataview.dql+txt"
+      2 "Valid periods for 'periodicNote' target type."
+      2 "Token must contain valid, non-empty scopes."
+      2 "Specifies the target note: 'filePath', 'activeFile', or 'periodicNote'."
+      2 "Rate limit exceeded. Please try again in {waitTime} seconds."
+
+=== Naming Conventions ===
+
+PascalCase classes/interfaces:
+50
+
+camelCase functions:
+53
+
+UPPER_CASE constants:
+8
+
+Potential naming issues (single letter vars outside loops):
+1
+
+=== Comment Coverage ===
+
+JSDoc comments (/** ... */):
+454
+
+Single-line comments (//):
+1116
+
+Multi-line comments (/* ... */):
+1
+
+TODO comments:
+1
+
+=== Import Analysis ===
+
+Total import statements:
+237
+
+Relative imports (../):
+118
+
+Absolute imports:
+69
+
+Wildcard imports (*):
+8
+
+=== Code Quality Indicators ===
+
+Console.log statements (potential debug code):
+3
+
+Any type usage:
+9
+
+Type assertions (as keyword):
+941
+
+Non-null assertions (!):
+4
+
+Optional chaining (?.):
+26
+
+Nullish coalescing (??):
+23
+
+=== Function Length Analysis ===
+
+Analyzing function lengths...
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:12: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:18:export async function getPeriodicNote(
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:39: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:45:export async function updatePeriodicNote(
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:65: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:71:export async function appendPeriodicNote(
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:91: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/periodicNoteMethods.ts:96:export async function deletePeriodicNote(
+src/services/obsidianRestAPI/methods/patchMethods.ts:14:function buildPatchHeaders(options: PatchOptions): Record<string, string> {
+src/services/obsidianRestAPI/methods/patchMethods.ts:42: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/patchMethods.ts:49:export async function patchFile(
+src/services/obsidianRestAPI/methods/patchMethods.ts:76: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/patchMethods.ts:82:export async function patchActiveFile(
+src/services/obsidianRestAPI/methods/patchMethods.ts:106: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/patchMethods.ts:113:export async function patchPeriodicNote(
+src/services/obsidianRestAPI/methods/commandMethods.ts:16: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/commandMethods.ts:21:export async function executeCommand(
+src/services/obsidianRestAPI/methods/commandMethods.ts:38: * @param _request - The internal request function from the service instance.
+src/services/obsidianRestAPI/methods/commandMethods.ts:42:export async function listCommands(
+src/services/obsidianRestAPI/methods/vaultMethods.ts:18: * @param _request - The internal request function from the service instance.
+
+=== Maintainability Metrics ===
+
+Files with high import count (>15 imports):
+src/mcp-server/server.ts: 16 imports
+
+Files with many exports:
+src/services/obsidianRestAPI/types.ts: 14 exports
+
+=== Error Handling Patterns ===
+
+Error throwing locations:
+85
+
+Error catching locations:
+64
+
+Error types used:
+     67 throw new McpError
+     18 throw new Error
+
+=== Code Organization ===
+
+Total TypeScript files:
+67
+
+Total lines of code:
+12453
+
+Average lines per file:
+185
+
+=========================================
+Analysis Complete
+=========================================
