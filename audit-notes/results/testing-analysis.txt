@@ -1,0 +1,62 @@
+=== Testing Coverage Analysis ===
+
+1. Test File Detection
+   Test files (*.test.ts, *.spec.ts):
+92
+   Test directories:
+32
+   Jest configuration:
+0
+   Vitest configuration:
+0
+
+2. Testing Framework Detection
+   Package.json test scripts:
+0
+   Testing dependencies:
+0
+
+3. Test Assertions & Mocking
+   expect() calls:
+0
+   describe() blocks:
+0
+   it() / test() blocks:
+0
+   Mock usage:
+0
+
+4. Manual Testing Scripts
+   Scripts directory:
+   Found scripts directory
+4
+   script files
+
+5. Example/Demo Files
+   Example files:
+5
+
+6. Documentation with Examples
+   Code blocks in markdown:
+4584
+   README files:
+269
+
+7. Type Testing
+   Type assertion tests:
+0
+
+8. Integration Testing Indicators
+   Docker files (for test environments):
+1
+   Environment test configs:
+0
+
+=== Test Coverage Configuration ===
+Coverage scripts in package.json:
+
+=== Source File Statistics ===
+Total TypeScript source files:
+67
+Lines of code in src:
+12453
